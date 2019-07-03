@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	]
 
 	data = get_data(tickets_file)
-	redmine = Redmine(url, key=apikey)
+	redmine = Redmine(url, key=apikey, requests={'verify': False})
 
 	tickets = data.get(sheet)
 
